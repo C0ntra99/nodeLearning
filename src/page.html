@@ -2,5 +2,14 @@
     <body>
         <h1>My Header</h1>
         <p>My paragraph.</p>
+        <p id='demo'></p>
+        <!-- adding text dynamically inside the webpage whenever the button is clicked -->
+        <input type="submit" onclick="document.getElementById('demo').innerHTML = 'test'">
+    </body>
+    <body>
+        <h1>Handling html events</h1>
+        <div id='dateTime'>DateTime:</div>
+        <button onclick="this.innerHTML = Date()">Click to get the current date and time</button>
+        <button onclick="document.getElementById('dateTime').innerHTML = 'DateTime:' + Date()">Click to get the current date and time</button>
     </body>
 </html> 
