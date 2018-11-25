@@ -74,7 +74,8 @@ app.get('/signup', (req, res, next) => {
 app.post('/signup', (req, res, next) => {
     let db = initDB('main.db');
     let q = 'SELECT username FROM users WHERE username = ?';
-    
+
+    //Check for password requirements    
     db.get(q, [req.body.uname], (err, row) => {
         if (err) throw err;
         if (row) {

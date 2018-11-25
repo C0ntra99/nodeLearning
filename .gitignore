@@ -1,2 +1,4 @@
-node_modules/*
-src/node_modules/*
+node_modules/
+src/node_modules/
+src/nodeLogin/node_modules/
+package-lock.json
