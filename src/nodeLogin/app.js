@@ -81,6 +81,8 @@ app.post('/signup', (req, res, next) => {
         if (row) {
             res.render('signup.pug',{err:"Username already exist!"});
         } else {
+
+            //need to sanitize the input before sending request
             let q = 'INSERT INTO users (username, password) VALUES (?, ?)';
             db.run(q,[req.body.uname, req.body.passwd], (err) => {
                 if (err) throw err;
@@ -91,4 +93,5 @@ app.post('/signup', (req, res, next) => {
     });
 });
 
+//Using exports will allow any program that imports app.js to ONLY use app 
 module.exports = app;

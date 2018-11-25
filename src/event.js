@@ -1,3 +1,4 @@
+//chapter 2 in node.js in action
 var fs = require('fs');
 var events = require('events');
 
